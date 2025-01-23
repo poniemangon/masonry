@@ -40,7 +40,7 @@ $(document).ready(function () {
             // Si la cantidad de elementos es impar, el último elemento ocupa el 100%
             if (totalItems % 2 !== 0) {
                 let lastItem = items.last();
-                lastItem.css('flex', '0 0 100%').css('max-width', '100%');
+                lastItem.css('flex', '0 0 calc(100% - 10px)').css('max-width', 'calc(100% - 10px)');
             }
         } else {
             // Si la ventana es mayor a 992px, usa el patrón original
