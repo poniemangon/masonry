@@ -5,9 +5,9 @@
   }
 .grid-wrap .item {width: calc(25% - 10px);}
 
-  .grid-wrap img {width: 100%; object-fit: cover; height: 100%;}
+.grid-wrap img {width: 100%; object-fit: cover; height: 100%;}
 
-  .container {max-width: 1200px; width: 80%; margin: auto;}
+.container {max-width: 1200px; width: 80%; margin: auto;}
 
 * {font-family: 'Montserrat', sans-serif;}
 
@@ -22,3 +22,5 @@ input {border: none; background-color: #FAFAFA; padding: 10px; text-align: cente
 button {padding: 10px; background-color: darkblue; color: white; margin-top: 20px; border: none; cursor: pointer;}
 
 form {display: flex; flex-direction: column;}
+
+.item {min-height: 200px;}
