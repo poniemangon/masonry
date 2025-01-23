@@ -23,7 +23,7 @@ button {padding: 10px; background-color: darkblue; color: white; margin-top: 20p
 
 form {display: flex; flex-direction: column;}
 
-.item {min-height: 200px;}
+.item {min-height: 200px; cursor: pointer;}
 
 .grid-wrap .item img:hover {
     transform: scale(1.05);
