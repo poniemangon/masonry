@@ -1,6 +1,24 @@
-body {margin: 0;}
+.grid-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  }
+.grid-wrap .item {width: calc(25% - 10px);}
 
-.grid-item { width: 200px; }
-.grid-item--width2 { width: 400px; }
+  .grid-wrap img {width: 100%; object-fit: cover; height: 100%;}
 
-.grid-item img {width: 100%; display: block;}
+  .container {max-width: 1200px; width: 80%; margin: auto;}
+
+* {font-family: 'Montserrat', sans-serif;}
+
+.header {display: flex; flex-direction: column; align-items: center; padding: 40px 0; text-align: center;}
+
+h1 {font-size: 40px; text-align: center;}
+
+h3 {font-size: 20px;}
+
+input {border: none; background-color: #FAFAFA; padding: 10px; text-align: center; }
+
+button {padding: 10px; background-color: darkblue; color: white; margin-top: 20px; border: none; cursor: pointer;}
+
+form {display: flex; flex-direction: column;}
