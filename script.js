@@ -1,3 +1,19 @@
+function prepareLightbox() {
+    $('.grid-wrap .item img').off('click').on('click', function () {
+        const imgSrc = $(this).attr('src');
+        $('#lightbox .lightbox-img').attr('src', imgSrc);
+        $('#lightbox').css('display', 'flex').hide().fadeIn(); 
+    });
+
+    $('#lightbox .close, #lightbox').off('click').on('click', function (e) {
+        if (e.target !== $('.lightbox-img')[0]) {
+            $('#lightbox').fadeOut(function () {
+                $(this).css('display', 'none'); 
+            });
+        }
+    });
+}
+
 $(document).ready(function () {
     let totalItems = 11; // Valor inicial de 11 elementos por defecto
     let items = $('.grid-wrap .item');
@@ -75,6 +91,8 @@ $(document).ready(function () {
 
         // Ejecuta la función al cargar y al cambiar el tamaño de la ventana
         adjustItemHeight();
+
+        prepareLightbox();
     }
 
     // Llama a la función inicial de actualización
@@ -116,3 +134,4 @@ $(document).ready(function () {
         updateGrid();
     });
 });
+

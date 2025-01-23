@@ -3,9 +3,9 @@
   flex-wrap: wrap;
   gap: 10px;
   }
-.grid-wrap .item {width: calc(25% - 10px);}
+.grid-wrap .item {width: calc(25% - 10px); overflow: hidden}
 
-.grid-wrap img {width: 100%; object-fit: cover; height: 100%;}
+.grid-wrap img {width: 100%; object-fit: cover; height: 100%; transition: .8s}
 
 .container {max-width: 1200px; width: 80%; margin: auto;}
 
@@ -24,3 +24,13 @@ button {padding: 10px; background-color: darkblue; color: white; margin-top: 20p
 form {display: flex; flex-direction: column;}
 
 .item {min-height: 200px;}
+
+.grid-wrap .item img:hover {
+    transform: scale(1.05);
+}
+
+#lightbox {display: none; position: fixed; top: 0; left: 0; width: 100%;height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;}
+
+#lightbox img { max-width: 90%; max-height: 90%;}
+
+#lightbox .close { position: absolute; top: 20px;  right: 40px; font-size: 2em;color: white; cursor: pointer;}
