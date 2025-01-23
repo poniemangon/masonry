@@ -56,7 +56,7 @@ $(document).ready(function () {
                 let remainingItems = items.slice(startIndex);
 
                 // Aplica 100% de ancho al único elemento restante
-                remainingItems.css('flex', '0 0 100%').css('max-width', '100%');
+                remainingItems.css('flex', '0 0 calc(100% - 10px)').css('max-width', 'calc(100% - 10px)');
             } else if (remaining === 2) {
                 // Encuentra el índice de los últimos dos elementos
                 let startIndex = totalItems - remaining;
